@@ -1,0 +1,3 @@
+chef;szef
+sheriff;szeryf
+mountain;gora
