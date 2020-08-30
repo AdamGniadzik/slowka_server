@@ -1,6 +1,7 @@
 package com.languages;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.BufferedReader;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "*")
 @RestController
+@RequestMapping(produces="application/json;charset=UTF-8")
 public class WebController {
 
     @Autowired
@@ -65,6 +67,7 @@ public class WebController {
 
     @GetMapping("/reloadAll")
     public void deleteAll() {
+        wordRepository.setUtf8();
         List<Word> notLearnedList = getAllNotLearnedWords();
         notLearnedWordRepository.deleteAll();
         wordRepository.deleteAll();
