@@ -1,0 +1,28 @@
+Благоприятный;Pomyślny, dobry
+Демографическая ситуация; Sytuacja demograficzna
+Демографические процéссы; Procesy demograficzne
+Демогрáфия;Demografia
+Динамика развития;Dynamika rozwoju
+Закон;Prawo
+Закономéрность;Prawidłowość
+Льготы;Ulgi(prawne)
+Прогноз;prognoza
+Продолжительность(чего?) жизни;czas trwania(życia)
+Рождаемость;Liczba urodzeń
+Рождаться/родиться;Urodzili sie
+Смéртность;śmiertelność/umieralność
+Материáльный;Materialny
+Материнство;Macierzynstwo
+Mépa;Miara
+Миграция (какая?) ;Migracja
+Национальная;Narodowy
+Пéрепись;Spis powszechny
+Переселéние;Przesiedlenie
+Статистика;Statystyka
+Убыль, ж. = уменьшéние,численности;Ubytek(pomniejszenie ilosci)
+Увеличéние = рост (чего?); wzrost
+Экспертиза;Ekspertyza
+Сокращение (чего?);Pomniejszenie
+Стабильность(какая?) политическая, экономическая; Stabilnosc(polityczna,ekonomiczna)
+пособие;Zasiłek
+попoлнение(чего?);uzupelnienie
