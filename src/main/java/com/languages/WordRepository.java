@@ -12,6 +12,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 @Repository
+
 public interface WordRepository extends JpaRepository<Word, Long> {
 
     void deleteAll();
@@ -21,7 +22,7 @@ public interface WordRepository extends JpaRepository<Word, Long> {
 
     @Transactional
     @Modifying
-    @Query(value = "set names utf8", nativeQuery = true)
+    @Query(value = "set names utf8; ALTER DATABASE language CHARACTER SET utf8 COLLATE utf8_general_ci;", nativeQuery = true)
     void setUtf8();
 
 }
