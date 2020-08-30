@@ -22,7 +22,11 @@ public interface WordRepository extends JpaRepository<Word, Long> {
 
     @Transactional
     @Modifying
-    @Query(value = "set names utf8; ALTER DATABASE language CHARACTER SET utf8 COLLATE utf8_general_ci;", nativeQuery = true)
+    @Query(value = "ALTER DATABASE language CHARACTER SET utf8 COLLATE utf8_general_ci", nativeQuery = true)
     void setUtf8();
+    @Transactional
+    @Modifying
+    @Query(value = "SET NAMES utf8", nativeQuery = true)
+    void setUtf8Part2();
 
 }

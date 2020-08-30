@@ -67,7 +67,9 @@ public class WebController {
 
     @GetMapping("/reloadAll")
     public void deleteAll() {
+        wordRepository.setUtf8Part2();
         wordRepository.setUtf8();
+
         List<Word> notLearnedList = getAllNotLearnedWords();
         notLearnedWordRepository.deleteAll();
         wordRepository.deleteAll();
