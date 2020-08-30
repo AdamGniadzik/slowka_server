@@ -63,14 +63,13 @@ public class WebController {
         return wordRepository.findAll();
     }
 
-    @GetMapping("/deleteAll")
+    @GetMapping("/reloadAll")
     public void deleteAll() {
         List<Word> notLearnedList = getAllNotLearnedWords();
         notLearnedWordRepository.deleteAll();
         wordRepository.deleteAll();
         chapterRepository.deleteAll();
         languageRepository.deleteAll();
-
         reload();
         notLearnedList.forEach(word -> {
             wordRepository.findByLanguageCodeAndChapterDescriptionAndInForeign(word.language.code, word.chapter.description, word.inForeign).ifPresentOrElse(
