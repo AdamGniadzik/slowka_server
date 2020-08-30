@@ -1,2 +1,2 @@
-prison;wiezien
 cat;kot
+telephone;telefon

@@ -41,14 +41,14 @@ public class WebController {
             String chapters[] = langDirectory.list();
             for (String chapterFileName : chapters) {
                 String chapterName = chapterFileName.substring(0, chapterFileName.indexOf('.'));
-                Chapter chapter = chapterRepository.findByLanguageCodeAndDescription(languageName,chapterName).orElseGet(() -> chapterRepository.save(new Chapter(chapterName, language)));
+                Chapter chapter = chapterRepository.findByLanguageCodeAndDescription(languageName, chapterName).orElseGet(() -> chapterRepository.save(new Chapter(chapterName, language)));
                 File chapterFile = new File(langDirectory.getAbsolutePath() + "\\" + chapterFileName);    //creates a new file instance
                 try {
                     BufferedReader chapterReader = new BufferedReader(new FileReader(chapterFile));
                     String line;
                     while ((line = chapterReader.readLine()) != null) {
                         String[] content = line.split(";");
-                        wordRepository.findByLanguageCodeAndChapterDescriptionAndInForeign(languageName, chapterName,content[0]).ifPresentOrElse(word -> {
+                        wordRepository.findByLanguageCodeAndChapterDescriptionAndInForeign(languageName, chapterName, content[0]).ifPresentOrElse(word -> {
                         }, () -> wordRepository.save(new Word(language, chapter, content[0], content[1])));
                     }
                 } catch (Exception e) {
@@ -65,9 +65,15 @@ public class WebController {
 
     @GetMapping("/deleteAll")
     public void deleteAll() {
+        List<Word> notLearnedList = getAllNotLearnedWords();
         wordRepository.deleteAll();
         chapterRepository.deleteAll();
         languageRepository.deleteAll();
+        reload();
+        notLearnedList.forEach(word -> {
+            wordRepository.findByLanguageCodeAndChapterDescriptionAndInForeign(word.language.code, word.chapter.description, word.inForeign).ifPresentOrElse(
+                    word1 -> notLearnedWordRepository.save(new NotLearnedWord(word1)), ()-> notLearnedWordRepository.deleteByWordLanguageCodeAndWordChapterDescriptionAndWordInForeign(word.language.code, word.chapter.description, word.inForeign));
+        });
     }
 
     @GetMapping("/getChaptersByLanguage")
@@ -75,17 +81,19 @@ public class WebController {
         System.out.println(chapterRepository.findAllByLanguageCode(language));
         return chapterRepository.findAllByLanguageCode(language);
     }
+
     @GetMapping("/getNotLearnedChaptersByLanguage")
-    public List<Chapter> getNotLearnedChaptersByLanguage(@RequestParam String language){
-     return  notLearnedWordRepository.findAllByWordLanguageCode(language).stream().map(NotLearnedWord::getChapter).distinct().collect(Collectors.toList());
+    public List<Chapter> getNotLearnedChaptersByLanguage(@RequestParam String language) {
+        return notLearnedWordRepository.findAllByWordLanguageCode(language).stream().map(NotLearnedWord::getChapter).distinct().collect(Collectors.toList());
     }
+
     @GetMapping("/getNotLearnedWordsByChapterAndLanguage")
-    public List<Word> getNotLearnedWordsByLanguageAndChapter(@RequestParam String language, @RequestParam String chapter){
-        return notLearnedWordRepository.findAllByWordLanguageCodeAndWordChapterDescription(language,chapter).stream().map(NotLearnedWord::getWord).collect(Collectors.toList());
+    public List<Word> getNotLearnedWordsByLanguageAndChapter(@RequestParam String language, @RequestParam String chapter) {
+        return notLearnedWordRepository.findAllByWordLanguageCodeAndWordChapterDescription(language, chapter).stream().map(NotLearnedWord::getWord).collect(Collectors.toList());
     }
 
     @GetMapping("/getAllWordsByChapter")
-    public List<Word> getWordsByLanguageAndChapter( @RequestParam String language, @RequestParam String chapter) {
+    public List<Word> getWordsByLanguageAndChapter(@RequestParam String language, @RequestParam String chapter) {
         List<Word> result = wordRepository.findAllByLanguageCodeAndChapterDescription(language, chapter);
         Collections.shuffle(result);
         return result;
@@ -100,7 +108,7 @@ public class WebController {
 
     @PostMapping("/addNotLearnedWord")
     public void addNotLearnedWord(@RequestParam String language, @RequestParam String chapter, @RequestParam String inForeign) {
-        wordRepository.findByLanguageCodeAndChapterDescriptionAndInForeign(language,chapter,inForeign).ifPresent(word -> notLearnedWordRepository.save(new NotLearnedWord(word)));
+        wordRepository.findByLanguageCodeAndChapterDescriptionAndInForeign(language, chapter, inForeign).ifPresent(word -> notLearnedWordRepository.save(new NotLearnedWord(word)));
     }
 
     @GetMapping("/getAllNotLearnedWordsByChapter")
@@ -111,9 +119,10 @@ public class WebController {
     }
 
     @GetMapping("/getAllNotLearnedLanguages")
-    public List<Language> getAllNotLearnedLanguage(){
+    public List<Language> getAllNotLearnedLanguage() {
         return notLearnedWordRepository.findAll().stream().map(NotLearnedWord::getLanguage).distinct().collect(Collectors.toList());
     }
+
     @GetMapping("/getAllNotLearnedWords")
     public List<Word> getAllNotLearnedWords() {
         List<Word> result = notLearnedWordRepository.findAll().stream().map(NotLearnedWord::getWord).collect(Collectors.toList());
@@ -139,13 +148,14 @@ public class WebController {
 
     @PostMapping("/sendUnknownWord")
     public void addNewNotLearnedWord(@RequestParam String language, @RequestParam String chapter, @RequestParam String word) {
-        notLearnedWordRepository.findByWordLanguageCodeAndWordChapterDescriptionAndWordInForeign(language,chapter,word)
-                .ifPresentOrElse(notLearnedWord -> {},
-                () -> notLearnedWordRepository.save(new NotLearnedWord(wordRepository.findByLanguageCodeAndChapterDescriptionAndInForeign(language,chapter,word).get())));
+        notLearnedWordRepository.findByWordLanguageCodeAndWordChapterDescriptionAndWordInForeign(language, chapter, word)
+                .ifPresentOrElse(notLearnedWord -> {
+                        },
+                        () -> notLearnedWordRepository.save(new NotLearnedWord(wordRepository.findByLanguageCodeAndChapterDescriptionAndInForeign(language, chapter, word).get())));
     }
 
     @PostMapping("/deleteUnknownWord")
     public void deleteNewNotLearnedWord(@RequestParam String language, @RequestParam String chapter, @RequestParam String word) {
-        notLearnedWordRepository.deleteByWordLanguageCodeAndWordChapterDescriptionAndWordInForeign(language,chapter,word);
+        notLearnedWordRepository.deleteByWordLanguageCodeAndWordChapterDescriptionAndWordInForeign(language, chapter, word);
     }
 }
