@@ -80,6 +80,14 @@ public class WebController {
         });
     }
 
+    @GetMapping("/deleteAll")
+    public void deleteWholeData(){
+        notLearnedWordRepository.deleteAll();
+        wordRepository.deleteAll();
+        chapterRepository.deleteAll();
+        languageRepository.deleteAll();
+    }
+
     @GetMapping("/getChaptersByLanguage")
     public List<Chapter> getChaptersByLanguage(@RequestParam String language) {
         System.out.println(chapterRepository.findAllByLanguageCode(language));

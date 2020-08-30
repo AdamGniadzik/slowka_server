@@ -1,11 +1,14 @@
 package com.languages;
 
-import org.springframework.data.jdbc.repository.query.Query;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 @Repository
@@ -16,7 +19,9 @@ public interface WordRepository extends JpaRepository<Word, Long> {
     List<Word> findAllByLanguageCodeAndChapterDescription(String language, String chapter);
     List<Word> findAllByLanguageCode(String language);
 
-    @Query("set names 'utf8'")
+    @Transactional
+    @Modifying
+    @Query(value = "set names utf8", nativeQuery = true)
     void setUtf8();
 
 }
