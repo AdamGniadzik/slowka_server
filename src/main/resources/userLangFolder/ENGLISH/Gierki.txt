@@ -1,3 +1,0 @@
-cat;kot
-cup;kubek
-bottle;butelka
