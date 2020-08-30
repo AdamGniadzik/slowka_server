@@ -14,9 +14,9 @@
     <name>languages</name>
     <description>Program for learnign</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>14</java.version>
     </properties>
-
+ <packaging>jar</packaging>
 
     <dependencies>
         <dependency>

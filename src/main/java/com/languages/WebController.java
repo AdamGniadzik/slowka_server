@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -46,7 +44,7 @@ public class WebController {
                 Chapter chapter = chapterRepository.findByLanguageCodeAndDescription(languageName, chapterName).orElseGet(() -> chapterRepository.save(new Chapter(chapterName, language)));
                 File chapterFile = new File(langDirectory.getAbsolutePath() + "\\" + chapterFileName);    //creates a new file instance
                 try {
-                    BufferedReader chapterReader = new BufferedReader(new FileReader(chapterFile));
+                    BufferedReader chapterReader = new BufferedReader(new InputStreamReader(new FileInputStream(chapterFile), "UTF-8"));
                     String line;
                     while ((line = chapterReader.readLine()) != null) {
                         String[] content = line.split(";");
