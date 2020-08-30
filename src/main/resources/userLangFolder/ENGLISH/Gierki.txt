@@ -1,2 +1,3 @@
 cat;kot
-telephone;telefon
+cup;kubek
+bottle;butelka
