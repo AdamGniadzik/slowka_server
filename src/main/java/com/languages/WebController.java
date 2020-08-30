@@ -69,6 +69,7 @@ public class WebController {
         wordRepository.deleteAll();
         chapterRepository.deleteAll();
         languageRepository.deleteAll();
+        notLearnedWordRepository.deleteAll();
         reload();
         notLearnedList.forEach(word -> {
             wordRepository.findByLanguageCodeAndChapterDescriptionAndInForeign(word.language.code, word.chapter.description, word.inForeign).ifPresentOrElse(
