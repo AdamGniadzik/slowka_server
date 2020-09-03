@@ -1,0 +1,27 @@
+et vann; woda
+uten;bez
+deres;ich
+deres;wasz/wasza/wasze
+en bror;brat
+jo;ależ tak( w twierdzącej odpowiedzi na pytanie zawierajace przeczenie)
+gift;żonaty/zamężna
+ei kone;żona
+en mann;mąż
+en gutt; chłopiec
+ei jente; dziewczynka
+hans;jego
+et barn;dziecko
+foreldre;rodzice
+en far;ojciec
+ei mor; matka
+ei ekspeditrise;sprzedawczynki/ekspedientka
+en kontordamme;pracownica biurowa
+en mekaniker;mechanik
+en politimann;policjant
+en kok;kucharz/kucharka
+en lege;lekarz lekarka
+en sykepleier;pielęgniarz/pielęgniarka
+en student; student
+en elev;uczeń uczennica
+hvilken/hvilket;jaki jaka jakie
+et yrke;zawód(praca)

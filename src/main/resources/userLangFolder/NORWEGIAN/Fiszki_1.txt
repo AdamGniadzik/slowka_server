@@ -1,0 +1,100 @@
+sytti;siedemdziesiąt
+alt;wszystko
+annen/annet;inny,inne,inne
+en kopp;filiżanka
+God kveld!;Dobry wieczór
+noe;coś
+God dag; Dzień dobry
+mye;dużo, bardzo
+god/godt; dobry dobra dobre
+en mat;jedzenie
+et supermarked;supermarket
+(et) hundre; sto
+nitti;dziewięćdziesiąt
+hvordan;jak, w jaki sposób
+ikke;nie
+Unnskyld;przepraszam
+en polsk; język polski
+hun;ona
+Takk;Dziękuję
+jeg;ja
+Ha det bra!;Cześć(na pożegnanie)/ Trzymaj się
+elleve;jedenaście
+gammel/gammelt;stary, stara, stare
+ti;dziesięć
+ni;dziewięć
+en/ett;jeden
+Polen;Polska
+Danmark;Dania
+Sverige;Szwecja
+Tyskland;Niemcy
+bra;dobrze w porządku
+fra; z ( pochodzenie)
+vi;my
+dere;oni
+de;oni/one
+De;Pan/Pani/Państwo
+England;Anglia
+atten;osiemnaście
+sytten;siedemnascie
+seksten;szesnaście
+femten;piętnaście
+fjorten;czternascie
+tretten;trzynaście
+tolv;dwanascie
+i;w
+Norge;Norwegia
+Hvor?;Gdzie?
+Det;to
+en engelsk;język angielski
+Hvem?;Kto?
+han;on
+null;zero
+og; i, a
+min/mi/mitt;mój/moja/moje
+din/di/ditt;twój/twoja/twoje
+et nummer; numer
+en telefon;telefon
+tjue;dwadzieścia
+ja;tak
+nitten;dziewiętnaście
+hva?;co?,jak?
+veldig;bardzo
+Hei!;Cześć(na powitanie)
+ingen/ ikke noe; żaden, żadna, żadne
+hennes; jej
+en venn;przyjaciel
+ei venninne; przyjaciółka
+en katt;kot
+en hund; pies
+en skinke;szynka
+med;z
+en ost; ser zółty
+en pizza; pizza
+et eple;jabłko
+en appelsin;pomarańcza
+en banan;banan
+en kake;ciasto
+en eplekake; szarlotka
+en sjokolade;czekolada
+en is; lody
+en te;herbata
+et sukker; cukier
+en kaffe; kawa
+en melk;mleko
+en datamaskin;komputer
+en kart;mapa
+en penn;długopis
+en billett;bilet
+en avis;gazeta
+en ordbok;słownik
+ny/nytt;nowy,nowa,nowe
+denne/dette;ten,ta,to
+ei bok;książka
+en paraply;parasol
+et frimerke;znaczek pocztowy
+et kort;pocztówka
+den/det;on,ona,ono
+ei veske;torba
+en vin; wino
+en jus; sok
