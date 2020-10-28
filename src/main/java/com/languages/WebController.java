@@ -30,8 +30,7 @@ public class WebController {
     @GetMapping("/reload")
     public void reload() {
         File rootPath = new File("src\\main\\resources\\userLangFolder");
-        System.out.println(rootPath.canRead());
-        System.out.println(rootPath.isDirectory());
+
         File files[] = rootPath.listFiles();
         String languages[] = rootPath.list();
         for (String languageName : languages) {
@@ -90,7 +89,7 @@ public class WebController {
 
     @GetMapping("/getChaptersByLanguage")
     public List<Chapter> getChaptersByLanguage(@RequestParam String language) {
-        System.out.println(chapterRepository.findAllByLanguageCode(language));
+
         return chapterRepository.findAllByLanguageCode(language);
     }
 
@@ -168,13 +167,12 @@ public class WebController {
                             () -> notLearnedWordRepository.save(new NotLearnedWord(wordRepository.findByLanguageCodeAndChapterDescriptionAndInForeign(language, chapter, word).get())));
         }catch(Exception e){
             e.printStackTrace();
-            System.out.println(language + " " + chapter + "  " + word) ;
         }
     }
 
         @PostMapping("/deleteUnknownWord")
     public void deleteNotLearnedWord(@RequestParam String language, @RequestParam String chapter, @RequestParam String word) {
-        System.out.println(language + " " + chapter + " " + word);
+
         if(notLearnedWordRepository.findByWordLanguageCodeAndWordChapterDescriptionAndWordInForeign(language,chapter,word).isPresent())
             System.out.println("FOUNDED");
         else
