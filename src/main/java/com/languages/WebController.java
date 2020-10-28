@@ -160,14 +160,25 @@ public class WebController {
 
     @PostMapping("/sendUnknownWord")
     public void addNewNotLearnedWord(@RequestParam String language, @RequestParam String chapter, @RequestParam String word) {
-        notLearnedWordRepository.findByWordLanguageCodeAndWordChapterDescriptionAndWordInForeign(language, chapter, word)
-                .ifPresentOrElse(notLearnedWord -> {
-                        },
-                        () -> notLearnedWordRepository.save(new NotLearnedWord(wordRepository.findByLanguageCodeAndChapterDescriptionAndInForeign(language, chapter, word).get())));
+
+        try {
+            notLearnedWordRepository.findByWordLanguageCodeAndWordChapterDescriptionAndWordInForeign(language, chapter, word)
+                    .ifPresentOrElse(notLearnedWord -> {
+                            },
+                            () -> notLearnedWordRepository.save(new NotLearnedWord(wordRepository.findByLanguageCodeAndChapterDescriptionAndInForeign(language, chapter, word).get())));
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(language + " " + chapter + "  " + word) ;
+        }
     }
 
-    @PostMapping("/deleteUnknownWord")
-    public void deleteNewNotLearnedWord(@RequestParam String language, @RequestParam String chapter, @RequestParam String word) {
+        @PostMapping("/deleteUnknownWord")
+    public void deleteNotLearnedWord(@RequestParam String language, @RequestParam String chapter, @RequestParam String word) {
+        System.out.println(language + " " + chapter + " " + word);
+        if(notLearnedWordRepository.findByWordLanguageCodeAndWordChapterDescriptionAndWordInForeign(language,chapter,word).isPresent())
+            System.out.println("FOUNDED");
+        else
+            System.out.println("NOT FOUNDED");
         notLearnedWordRepository.deleteByWordLanguageCodeAndWordChapterDescriptionAndWordInForeign(language, chapter, word);
     }
 }

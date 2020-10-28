@@ -1,0 +1,32 @@
+глобальный;globalny
+влияние;wpływ
+автотранспорт;transport samochodowy
+деятельность;działaność
+загрязнение;zanieczyszczenie
+загрязнять;zanieczyszczać
+закон;prawo
+Зеленые; Uczestnicy green peace
+источник;żródło
+меры;miary
+мусор;śmieci
+нарушать;naruszać
+научно технический прогресс; naukowo techniczny progres
+нефтепровод; ropociąg (rura z ropą)
+оборудование;sprzet, wyposażenie
+общество;społeczeństwo
+окружающая среда; otaczające środowisko
+отходы;odpady
+Очистное устройство; Urządzenie czyszczące
+природа;przyroda
+природные ресурсы; naturalne zasoby
+промышленная зона;przemysłowa strefa
+промышленное предприятие;przemysłowe przedsiebiorstwo
+гармония,равновесие; harmonia, równowaga
+радиоактивные отходы;radioaktywne odpady
+рейтинг;ranking
+ресурсы;zasoby
+техникa; technika
+угроза;zagrożenie
+экологическая обстановка/ситуация; środowisko ekologiczne / sytuacja
+экологичность;ekologicznosc
+экология;ekologia

@@ -25,6 +25,7 @@ public class NotLearnedWord {
     }
 
     public NotLearnedWord(Word word) {
+        System.out.print(word);
         this.word = word;
     }
     @JsonIgnore
