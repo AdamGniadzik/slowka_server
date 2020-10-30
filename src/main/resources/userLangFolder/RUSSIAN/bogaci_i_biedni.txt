@@ -8,6 +8,7 @@
 зарплата;wynagrodzenie
 имущество;mienie
 копировать;kopiować
+колоссальный;kolosalny
 миллиардер;miliarder
 налог;podatek
 налогообложение;opodatkowanie
@@ -25,4 +26,3 @@
 уровень;poziom
 цена;cena
 шкала налогообложения;skala opodatkowania
-
