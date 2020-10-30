@@ -1,0 +1,28 @@
+бедный;biedny
+бизнес;biznes
+благосостояние;dobrobyt
+богатый;bogaty
+власть;władza
+возглавлять;kierować(firmą)
+доходы;dochody
+зарплата;wynagrodzenie
+имущество;mienie
+копировать;kopiować
+миллиардер;miliarder
+налог;podatek
+налогообложение;opodatkowanie
+неравенство;nierówność
+опережать;wyprzedzać
+отставать;pozostawać w tyle
+предприниматель;przedsiebiorca
+приватизация;prywatyzacja
+приватизировать;prywatyzowac
+расслоение (чего? общества);rozwartswienie(np. społeczeństwa)
+ресурсы;zasoby
+собственность;własność
+стабильность;stabilność
+стоимость;koszt
+уровень;poziom
+цена;cena
+шкала налогообложения;skala opodatkowania
+
