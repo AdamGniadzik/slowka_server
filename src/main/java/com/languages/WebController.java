@@ -2,14 +2,12 @@ package com.languages;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jdbc.repository.query.Query;
+import org.springframework.http.converter.json.GsonBuilderUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -149,7 +147,9 @@ public class WebController {
     @GetMapping("/deleteAllNotLearnedWords")
     public void deleteAllNotLearnedWords() {
         notLearnedWordRepository.deleteAll();
+
     }
+
 
 
     @GetMapping("/getAllLanguages")
