@@ -1,0 +1,137 @@
+владелец;właściciel
+Фазенда;hacjenda
+действительно;naprawdę
+грядка;grządka
+ухищрениe;sztuczka
+сельское хозяйство;rolnictwo
+сомнительный;wątpliwy
+Весьма;bardzo, wysoce
+объем;objętość
+подсчитать;obliczyć
+тратить;marnować
+салфеточный расчет;kalkukacja serwetkowa
+простенький;skromny
+садовый;ogrodowy
+расстояние;odległość
+inwentarz;Инвентарь
+удобрение;nawóz
+пленка;folia
+пленка для парников;folia do szklarni(foliaka)
+сетка-рабица;siatka rabica
+забор;płot, ogrodzenie
+садовая утварь; przybory ogrodowe
+древо;drzewo opałowe
+садовоe товариществo; Towarzystwo ogrodnicze
+взносы;składki, opłaty
+уложиться;zmieścić się
+турбазa; schronisko
+удовольствие;przyjemność
+обойтись;kosztować
+срок;termin, okres,czas
+закачивать;pompować
+тащит;ciągnąć
+барахло;śmieci
+строить;budować
+справедливо полагая; słusznie wierząc
+личный;osobisty
+пространство;przestrzeń
+посторонний;obcy
+собственный;własny
+шести соток; szesciu arów
+опять;znów
+очевидный;oczywisty
+относительно;stosunkowo
+участок;parcela
+комплект;zestaw
+Арендовать;wynajmować
+простенькую;bezpretensjonalnie
+приличный;przyzwoity
+воспринимать;postrzegać, przyjmować
+инвестиция;inwestycja
+объявленный; deklarowany
+заявленной цене; deklarowanej cenie
+схожий;podobny
+сарай;szopa
+упомянуть;wspomnieć
+микрорайон;osiedle
+застраивать;zabudowywać
+многоэтажный;wielopiętrowy
+коробка;pudełko, blok mieszkalny(chyba potocznie)
+поведение;zachowanie
+корень;korzeń
+рубеж;granica
+на рубеже XIX-XX веков; na przełomie XIX i XX wieku
+подражание;naśladowanie
+дворяне-помещики;szlachta-ziemianie
+вплоть;aż
+очередь;kolejka
+распространенный; ogólny, pospolity
+учитывать;brać pod uwagę
+простор;przestrzeń
+завуалированный;zawoalowany(przedstawiony nie wprost)
+Затянувшиеся;przedłużające się
+крепостнические;pańszczyźniane
+отношение;stosunek
+усадьба;dworek
+частный;prywatny
+добывать;wydobywać, wyciągać, zdobywać
+уплотняться;uszczelniać, ścieśniać
+ремесленно-торговые поселения;osiedla rzemieślniczo-handlowe
+воспроизведена;reprodukowana
+особенность;cecha
+выносить за их черту;wynieść za granicę(do diabła)
+разделять;podzielać
+продовольственный;spożywczy
+крестьянский;chłopski, ludowy
+сжимать;kompresować, sciskać, zgniatać
+насильно;przymusowo, gwałtem, wbrew woli
+ведущий;główny
+распоряжаться;rozporządzać
+состоятельный;zamożny
+изначально;pierwotnie, na początku
+раздача;rozdanie, rozdawanie
+производство;produkcja
+дополнительный;dodatkowy
+продовольствие;żywność
+отток;odpływ
+Неудивительно;nic dziwnego
+обзавестись;zaopatrzyć, nabyć
+съезжаться;zjeżdzać się
+пригород;przedmieście
+джентрификация;gentryfikacja(zmiana charakteru czesci dzielnicy)
+вытекающий; wynikający
+предъявлят;przedstawiać
+сумасшедшая;szalona obłąkana
+приобщиться;dołączyć się, zaangażować się
+отдушина;odskocznia
+пересекать;przecinać, przecinać się
+наблюдение;obserwacja
+неудовлетворительный;niezadowalający
+сельскохозяйственные продукты;produkty rolne
+внеэкономическое;pozaekonomiczne
+распределенный образ жизни; rozproszony obraz zycia
+ловко;sprytnie
+доверять;ufać
+предпочитать;woleć, preferować
+неприменимы; nie dotyczy
+совокупный;łączny
+стремлениe;dążenie
+вкладывать;inwestować
+обеспечение;zapewnienie
+гарантия;gwarancja
+издержки;koszt,koszty
+усилие;wysiłek
+развлечение;rozrywka
+неподвластные;niepodlegające
+спасаться;ratować się, zbawiać się
+взгляд;spojrzenie, wzrok
+всевидящего;wszechwidzącego
+выручать;wyręczać
+Иногда; niekiedy, czasami
+
+
+
+
+
+
+
